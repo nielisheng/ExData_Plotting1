@@ -17,7 +17,7 @@ hpc2$DTInterval = difftime(x, y, units=c("mins"))
 png(filename="plot2.png", width=480, height=480)
 
 ##plot histgram
-plot(hpc2$DTInterval, as.numeric(hpc2$Global_active_power), type="l")
+plot(hpc2$DTInterval, as.numeric(hpc2$Global_active_power), type="l", xlab=c("a", "b"))
 
 ##shut off png device
 dev.off()

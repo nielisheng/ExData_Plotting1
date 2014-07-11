@@ -14,15 +14,24 @@ y <- as.POSIXlt("01/02/2007 00:00:00", tz="", format="%d/%m/%Y %H:%M:%S")
 hpc2$DTInterval = difftime(x, y, units=c("mins"))
 
 ##set graphic device to png
-png(filename="plot3.png", width=480, height=480)
+png(filename="plot4.png", width=480, height=480)
+par(mfrow=c(2,2))
 
-##plot histgram
+##plot 1
+plot(hpc2$DTInterval, as.numeric(hpc2$Global_active_power), type="l")
+
+##plot 2
+plot(hpc2$DTInterval, as.numeric(hpc2$Voltage), type="l", col="black")
+
+##plot 3
 plot(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_1), type="n")
-
 lines(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_1), type="l", col="black")
 lines(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_2), type="l", col="red")
 lines(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_3), type="l", col="blue")
 legend("topright", lty=1, col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
+##plot 4
+plot(hpc2$DTInterval, as.numeric(hpc2$Global_active_power), type="b")
 
 ##shut off png device
 dev.off()

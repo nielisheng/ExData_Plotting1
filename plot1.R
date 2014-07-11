@@ -10,5 +10,5 @@ png(filename="plot5.png", width=480, height=480)
 ##plot histgram
 hist(as.numeric(hpc2$Global_active_power), col="red")
 
-##shut png device
+##shut off png device
 dev.off()
