@@ -21,7 +21,6 @@ plot(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_1), type="l", col="black")
 plot(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_2), type="l", col="red")
 plot(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_3), type="l", col="blue")
 
-plot(null, null)
 
 lines(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_1), type="l", col="black")
 lines(hpc2$DTInterval, as.numeric(hpc2$Sub_metering_2), type="l", col="red")
